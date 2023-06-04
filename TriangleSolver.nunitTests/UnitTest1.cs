@@ -147,6 +147,10 @@ public class Tests
 
 
 
+
+
+
+
     [Test]
     public void AnalyzeTriangle_Input0and60and30_OutputInvalidZeroLengthTriangle()
     {
@@ -184,6 +188,51 @@ public class Tests
         int thirdSide = 30;
 
         string expected = "At least one side of your triangle has a zero length and is thus invalid";
+        //Act
+        string actual = Triangle.AnalyzeTriangle(firstSide, secondSide, thirdSide);
+        //Assert
+        Assert.AreEqual(expected, actual);
+    }
+
+
+
+    [Test]
+    public void AnalyzeTriangle_InputMinus10and30and30_OutputInvalidTriangle()
+    {
+        //Arrange
+        int firstSide = -10;
+        int secondSide = 30;
+        int thirdSide = 30;
+
+        string expected = "A triangle cannot be formed with those numbers";
+        //Act
+        string actual = Triangle.AnalyzeTriangle(firstSide, secondSide, thirdSide);
+        //Assert
+        Assert.AreEqual(expected, actual);
+    }
+    [Test]
+    public void AnalyzeTriangle_Input10and20and5_OutputInvalidTriangle()
+    {
+        //Arrange
+        int firstSide = 10;
+        int secondSide = 20;
+        int thirdSide = 5;
+
+        string expected = "A triangle cannot be formed with those numbers";
+        //Act
+        string actual = Triangle.AnalyzeTriangle(firstSide, secondSide, thirdSide);
+        //Assert
+        Assert.AreEqual(expected, actual);
+    }
+    [Test]
+    public void AnalyzeTriangle_Input40and5and10_OutputInvalidTriangle()
+    {
+        //Arrange
+        int firstSide = -10;
+        int secondSide = 30;
+        int thirdSide = 30;
+
+        string expected = "A triangle cannot be formed with those numbers";
         //Act
         string actual = Triangle.AnalyzeTriangle(firstSide, secondSide, thirdSide);
         //Assert
