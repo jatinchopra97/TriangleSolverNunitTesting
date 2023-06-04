@@ -25,7 +25,7 @@ namespace TriangleSolver
                     }
                     else if ((firstSide == secondSide) || (secondSide == thirdSide) || (thirdSide == firstSide))
                     {
-                        output = "The triangle is valid and is an ISOSCELES";
+                    output = "The triangle is valid and is an ISOSCELES";
 
                     }
                     else
