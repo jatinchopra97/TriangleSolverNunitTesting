@@ -144,4 +144,49 @@ public class Tests
         //Assert
         Assert.AreEqual(expected, actual);
     }
+
+
+
+    [Test]
+    public void AnalyzeTriangle_Input0and60and30_OutputInvalidZeroLengthTriangle()
+    {
+        //Arrange
+        int firstSide = 0;
+        int secondSide = 60;
+        int thirdSide = 30;
+
+        string expected = "At least one side of your triangle has a zero length and is thus invalid";
+        //Act
+        string actual = Triangle.AnalyzeTriangle(firstSide, secondSide, thirdSide);
+        //Assert
+        Assert.AreEqual(expected, actual);
+    }
+    [Test]
+    public void AnalyzeTriangle_Input0and60and0_OutputInvalidZeroLengthTriangle()
+    {
+        //Arrange
+        int firstSide = 0;
+        int secondSide = 60;
+        int thirdSide = 0;
+
+        string expected = "At least one side of your triangle has a zero length and is thus invalid";
+        //Act
+        string actual = Triangle.AnalyzeTriangle(firstSide, secondSide, thirdSide);
+        //Assert
+        Assert.AreEqual(expected, actual);
+    }
+    [Test]
+    public void AnalyzeTriangle_Input10and0and30_OutputInvalidZeroLengthTriangle()
+    {
+        //Arrange
+        int firstSide = 10;
+        int secondSide = 0;
+        int thirdSide = 30;
+
+        string expected = "At least one side of your triangle has a zero length and is thus invalid";
+        //Act
+        string actual = Triangle.AnalyzeTriangle(firstSide, secondSide, thirdSide);
+        //Assert
+        Assert.AreEqual(expected, actual);
+    }
 }
